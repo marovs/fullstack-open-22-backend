@@ -1,0 +1,56 @@
+### Info
+GET localhost:3001/info
+Accept: application/html
+
+### Get all
+GET localhost:3001/api/persons
+Accept: application/json
+
+### Get by id
+GET localhost:3001/api/persons/1
+Accept: application/json
+
+### Post new person
+POST localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "test",
+  "number": "1234"
+}
+
+### Post no name
+POST localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "number": "1234"
+}
+
+### Post no number
+POST localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "abc"
+}
+
+### Post no body
+POST localhost:3001/api/persons
+Content-Type: application/json
+
+{
+
+}
+
+### Post not unique
+POST localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Arto Hellas",
+  "number": "1234"
+}
+
+### Delete by id
+DELETE localhost:3001/api/persons/1
